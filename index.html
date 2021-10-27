@@ -2,6 +2,7 @@
 
 <html>
   <head>
+    <!-- style-->
     <link rel="stylesheet" href="./src/css/style.css"/>
 
     <!-- google fonts-->
@@ -9,7 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Kleitomberg - DoWhile 2021</title>   
+    <title>Kleitomberg - DoWhile 2021</title> 
+
+    
+   
   </head>
 
   <body>
@@ -25,11 +29,11 @@
             <img src="./src/images/yo.png" alt="foto do perfil">
           </div>
 
-          <h1>Kleitomberg</h1>
+          <h1 id="username">Kleitomberg</h1>
 
           
          
-          <a target="_Blank" href="https://www.instagram.com/kleitomberg/"> 
+          <a target="_Blank" href="https://github.com/Kleitomberg"> 
             
             <img src="./src/images/github.svg" alt="icone github"> kleitomberg</a>
         
@@ -42,25 +46,25 @@
             👴 2.2 Anos</p>
 
 
-          <ul> 
+          <ul id="socialLinks"> 
             
-                 <li>              
+                 <li class="youtube">              
                   <a target="_Blank" href="">
                         <img src="./src/images/youtube.svg" alt="icone youtube">
                   </a>
                   </li>
-                  <li>              
+                  <li class="facebook">              
                     <a target="_Blank" href="">
                           <img src="./src/images/facebook.svg" alt="icone facebook">
                     </a>
                     </li>
-                    <li>              
+                    <li class="instagram">              
                       <a target="_Blank" href="">
                             <img src="./src/images/instagram.svg" alt="icone instagram">
                       </a>
                       </li>
 
-                      <li>              
+                      <li class="twitter">              
                         <a target="_Blank" href="">
                               <img src="./src/images/twitter.svg" alt="icone twitter">
                         </a>
@@ -73,6 +77,35 @@
     </main>
 
     
+      <script>
+
+              function changesSocialMediasLinks(){
+                
+                for(let li of socialLinks.children){
+                  const social = li.getAttribute('class')
+
+                    li.children[0].href = `https://${social}.com/${linksSocialMedias[social]}`
+
+                  //alert()
+                }
+             
+              
+
+              }
+        
+              const linksSocialMedias = {
+                github : "kleitomberg",
+                instagram : "kleitomberg",
+                youtube : "OZAMVsz",
+                twitter : "bsozx",
+                facebook : "kleitom.berg"
+              }
+         
+              changesSocialMediasLinks()
+
+         
+
+      </script>
 
   </body>
 </html>
