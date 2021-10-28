@@ -19,3 +19,23 @@ function changesSocialMediasLinks(){
   }
 
   changesSocialMediasLinks()
+
+//função que pega as informações dos usuarios atraves da api do github
+  function getGithubProfileInfos(){
+    const url = `https://api.github.com/users/${linksSocialMedias.github}`
+    
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      
+      username.textContent=data.name
+      userBio.textContent=data.bio      
+      userLink.href=data.html_url
+      photoperfil.src=data.avatar_url
+      userlogin.textContent=data.login
+      
+
+    })
+
+  }
+  getGithubProfileInfos()
