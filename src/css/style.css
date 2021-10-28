@@ -24,7 +24,7 @@ body {
 }
 
 main{
-background: url(/src/images/background.svg) no-repeat center/cover;
+background: url(https://kleitomberg.github.io/nlwheat/src/images/background.svg) no-repeat center/cover;
 
 width:100vw;
 height: 100vh;
